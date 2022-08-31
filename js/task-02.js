@@ -7,11 +7,13 @@ const ingredients = [
   'Condiments',
 ];
 
-const list = document.getElementById("ingredients");
+// PRZYPISANIE KONTENERA DO ZMNIENNEJ 
+const listContainer = document.getElementById("ingredients");
 
+// ITERACJA PO TABLICY I DODAWANIE ELEMENTÓW DO KONTENERA
 for (const ingredient of ingredients) {
   const item = document.createElement("li");
   item.textContent = ingredient;
   item.classList.add("item");
-  list.append(item);
+  listContainer.append(item);
 }

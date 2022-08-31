@@ -1,8 +1,6 @@
 const form = document.querySelector(".login-form");
 
-form.addEventListener("submit", handleSubmit);
-
-function handleSubmit(event) {
+const handleSubmit = (event) => {
   event.preventDefault();
   const {
     elements: { email, password },
@@ -15,3 +13,5 @@ function handleSubmit(event) {
   console.log(`Email: ${email.value}, Password: ${password.value}`);
   event.currentTarget.reset();
 }
+
+form.addEventListener("submit", handleSubmit);
