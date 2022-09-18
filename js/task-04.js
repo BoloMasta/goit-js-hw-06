@@ -1,4 +1,3 @@
-// PRZYPISANIE PRZYCISKÓW DO ZMIENNYCH
 const decrement = document.querySelector('button[data-action="decrement"]');
 const increment = document.querySelector('button[data-action="increment"]');
 const score = document.getElementById("value");

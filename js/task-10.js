@@ -14,8 +14,7 @@ const destroy = document.querySelector("button[data-destroy]");
 
 // FUNKCJA DO ZWIĘKSZANIA KWADRATÓW
 const increaseBox = () => {
-  let newBoxSize = Number(boxSize.slice(0, boxSize.length - 2));
-  newBoxSize += 10;
+  let newBoxSize = Number(boxSize.slice(0, boxSize.length - 2)) + 10;
   boxSize = newBoxSize + "px";
 };
 
@@ -26,7 +25,7 @@ const createBoxes = (amount) => {
     box.style.backgroundColor = getRandomHexColor();
     box.style.width = boxSize;
     box.style.height = boxSize;
-    box.style.float = "left";
+    box.classList.add("box");
     boxes.append(box);
     increaseBox(boxSize);
   }

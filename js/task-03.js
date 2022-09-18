@@ -13,10 +13,7 @@ const images = [
   },
 ];
 
-// PRZYPISANIE KONTENERA DO ZMIENNEJ
 const galleryContainer = document.querySelector(".gallery");
-
-// TWORZENIE GALERII
 const markup = images
   .map(
     (image) =>
@@ -24,5 +21,5 @@ const markup = images
   )
   .join("");
 
-// WSTAWIENIE GALERII DO KONTENERA  
+console.log(markup);
 galleryContainer.insertAdjacentHTML("afterbegin", markup);
