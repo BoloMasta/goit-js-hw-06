@@ -6,20 +6,14 @@ const getRandomHexColor = () => {
 };
 
 // ZMIENNE
-var boxSize = "30px";
 var amount = document.querySelector(".input");
 const boxes = document.getElementById("boxes");
 const create = document.querySelector("button[data-create]");
 const destroy = document.querySelector("button[data-destroy]");
 
-// FUNKCJA DO ZWIĘKSZANIA KWADRATÓW
-const increaseBox = () => {
-  let newBoxSize = Number(boxSize.slice(0, boxSize.length - 2)) + 10;
-  boxSize = newBoxSize + "px";
-};
-
 // FUNKCJA DO TWORZENIA KWADRATÓW
 const createBoxes = (amount) => {
+  let boxSize = "30px";
   for (let i = 0; i < amount; i++) {
     const box = document.createElement("div");
     box.style.backgroundColor = getRandomHexColor();
@@ -27,14 +21,16 @@ const createBoxes = (amount) => {
     box.style.height = boxSize;
     box.classList.add("box");
     boxes.append(box);
-    increaseBox(boxSize);
+
+    // ZWIĘKSZANIE KWADRATÓW
+    let newBoxSize = Number(boxSize.slice(0, boxSize.length - 2)) + 10;
+    boxSize = newBoxSize + "px";
   }
 };
 
 // FUNKCJA DO KASOWANIA KWADRATÓW
 const destroyBoxes = () => {
   boxes.innerHTML = "";
-  boxSize = "30px";
 };
 
 // NASŁUCHIWANIE
